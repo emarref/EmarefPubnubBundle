@@ -1,0 +1,20 @@
+{
+    "name": "emarref/pubnub-bundle",
+    "description": "Implement Pubnub into your Symfony application.",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Malcolm Fell",
+            "email": "emarref@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Emarref\\Bundle\\PubnubBundle\\": ""
+        }
+    }
+}
