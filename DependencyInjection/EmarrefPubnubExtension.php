@@ -16,5 +16,10 @@ class EmarrefPubnubExtension extends Extension
     {
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
+
+        $config = $this->processConfiguration(new Configuration(), $config);
+
+        $definition = $container->getDefinition('emarref.pubnub.client.pubnub');
+        $definition->replaceArgument(0, $config);
     }
 }

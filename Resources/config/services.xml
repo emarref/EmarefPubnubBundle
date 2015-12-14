@@ -4,22 +4,14 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
-    <!--
     <parameters>
-        <parameter key="emarref.bundle.pubnub.example.class">Emarref\Bundle\PubnubBundle\Example</parameter>
+        <parameter key="emarref.pubnub.client.pubnub.class">Pubnub\Pubnub</parameter>
     </parameters>
 
     <services>
-        <service id="emarref.bundle.pubnub.example" class="%emarref.bundle.pubnub.example.class%">
-            <argument type="service" id="service_id" />
-            <argument>plain_value</argument>
-            <argument>%parameter_name%</argument>
-            <call method="setService">
-                <argument type="service" id="service_id" />
-            </call>
-            <tag name="twig.extension" />
-            <tag name="kernel.event_listener" event="kernel.exception" method="onKernelException" />
+        <service id="emarref.pubnub.client.pubnub" class="%emarref.pubnub.client.pubnub.class%">
+            <argument type="collection"/>
         </service>
     </services>
-    -->
+
 </container>
